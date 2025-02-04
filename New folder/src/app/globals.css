@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.clip-path-polygon-100_0_0_0_100_100 {
+    clip-path: polygon(100% 0, 0% 0%, 100% 100%);
+  }
+  
+  .clip-path-polygon-0_100_100_100_0_0 {
+    clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
+  }
+  
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Custom breadcrumb styles in your globals.css if you want extra customization */
+nav[aria-label="breadcrumb"] {
+  font-size: 1rem;
+}

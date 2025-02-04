@@ -1,0 +1,23 @@
+# robots.txt for Final CouponRI project
+
+# Allow all search engines to crawl the site
+User-agent: *
+Disallow: /api/  # Block access to API routes
+Disallow: /admin/  # Block access to admin pages if they shouldn't be publicly accessible
+Disallow: /private/  # Add any other private folders you want to block
+Disallow: /.next/  # Prevent indexing of Next.js build folder
+Disallow: /node_modules/  # Prevent indexing of node modules
+
+# Block sensitive files
+Disallow: /README.md
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /yarn.lock
+Disallow: /.env
+Disallow: /.git
+
+# Allow all other files and folders
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.couponri.com/sitemap.xml
