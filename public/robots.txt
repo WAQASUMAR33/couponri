@@ -1,0 +1,21 @@
+# robots.txt of CouponRI 
+
+
+User-agent: *
+Disallow: /api/  
+Disallow: /admin/  
+Disallow: /private/  
+Disallow: /.next/  
+Disallow: /node_modules/ 
+
+
+Disallow: /README.md
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /yarn.lock
+Disallow: /.env
+Disallow: /.git
+
+Allow: /
+
+Sitemap: https://www.couponri.com/sitemap.xml

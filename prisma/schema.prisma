@@ -1,0 +1,149 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  role      String?
+}
+
+model Company {
+  id                 Int      @id @default(autoincrement())
+  com_title          String
+  comp_logo          String
+  comp_category      String
+  comp_description   String   @db.Text
+  comp_phone         String
+  comp_email         String
+  comp_website       String
+  comp_rating        String
+  created_at         DateTime @default(now())
+  updated_at         DateTime @updatedAt
+  comp_details       String?  @db.Text
+  comp_other_details String?  @db.Text
+  meta_description   String?
+  meta_title         String?
+  meta_focusKeyword  String?
+  web_slug           String?
+  comp_affiliateLink String?
+  comp_webtitle      String?
+  comp_status        String?
+}
+
+model Category {
+  id                   Int      @id @default(autoincrement())
+  category_name        String
+  category_description String?  @db.Text
+  category_status      String?
+  category_image       String
+  created_at           DateTime
+  updated_at           DateTime
+  meta_description     String?
+  meta_title           String?
+  meta_focusKeyword    String?
+  web_slug             String?
+}
+
+model Blogcategories {
+  id                Int      @id @default(autoincrement())
+  title             String?
+  description       String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  image             String?
+  meta_description  String?  @db.Text
+  meta_focusKeyword String?
+  meta_title        String?
+  web_slug          String?
+}
+
+model Blog {
+  id                Int      @id @default(autoincrement())
+  title             String
+  description       String   @db.Text
+  image             String
+  category          String
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  meta_description  String?
+  meta_title        String?
+  meta_focusKeyword String?
+  web_slug          String?
+}
+
+model Offer {
+  id                  Int      @id @default(autoincrement())
+  comp_id             Int
+  offer_type          String
+  offer_status        String?
+  offer_title         String
+  offer_code          String
+  offer_description   String
+  offer_users         String
+  offer_expiry        String?
+  offer_isverify      String
+  offer_details       String
+  created_at          DateTime @default(now())
+  updated_at          DateTime @updatedAt
+  offer_affiliateLink String?
+}
+
+model CategoryCoupon {
+  id         Int      @id @default(autoincrement())
+  name       String
+  offer      String?
+  meta_description  String?
+  meta_title        String?
+  meta_focusKeyword String?
+  web_slug          String?
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  status     String?
+}
+
+model Faqs {
+  id         Int      @id @default(autoincrement())
+  comp_id    Int
+  question   String   @db.Text
+  answer     String   @db.Text
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+}
+
+model Submittion {
+  id             Int       @id @default(autoincrement())
+  storeWebsite   String
+  offerType      String
+  code           String
+  description    String
+  startDate      DateTime?
+  expirationDate DateTime?
+  createdAt      DateTime  @default(now())
+}
+
+model Banners {
+  id          Int      @id @default(autoincrement())
+  adsbanner   String
+  blogslider1 String
+  blogslider2 String
+  created_at  DateTime @default(now())
+  updated_at  DateTime @default(now())
+  bannerurl   String?
+}
+
+model Headertag {
+  id         Int      @id @default(autoincrement())
+  code       String   @db.Text
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+}
