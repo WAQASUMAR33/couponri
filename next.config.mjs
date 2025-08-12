@@ -4,7 +4,7 @@ const nextConfig = {
         remotePatterns: [
           {
             protocol: 'https',
-            hostname: 'www.m3xtrader.com',
+            hostname: 'm3xtrader.com',
           },
         ],
       },
