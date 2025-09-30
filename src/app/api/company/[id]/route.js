@@ -33,7 +33,7 @@ export async function PUT(request, { params }) {
     // if (comp_logo) {
     //   const uploadImageToExternalAPI = async (imageBase64) => {
     //     try {
-    //       const response = await fetch('https://m3xtrader.com/coupon/uploadImage.php', {
+    //       const response = await fetch('https://couponri.divenclave.com/uploadImage.php', {
     //         method: 'POST',
     //         headers: {
     //           'Content-Type': 'application/json',

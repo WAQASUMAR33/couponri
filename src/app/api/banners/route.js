@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server';
-import prisma from '../../util/prisma'
+import prisma from '../../util/prisma';
+
+
+//--------------------------------------------------------------------------------------
 
 // GET all banners and POST a new banner
 export async function GET() {
@@ -11,6 +14,8 @@ export async function GET() {
   }
 }
 
+//--------------------------------------------------------------------------------------
+
 export async function POST(req) {
   try {
     const data = await req.json();
@@ -20,3 +25,6 @@ export async function POST(req) {
     return NextResponse.json({ error: 'Failed to create banner' }, { status: 500 });
   }
 }
+
+
+//--------------------------------------------------------------------------------------

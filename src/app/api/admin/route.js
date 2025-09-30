@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import prisma from '../../util/prisma';
 import bcrypt from 'bcryptjs'; // Import bcryptjs
-import { header } from 'express/lib/request';
+// Removed unused import
 
 // POST request to create a new admin user
 export async function POST(request) {
@@ -70,9 +70,7 @@ export async function GET() {
         status: false,
         error: error.message,
       },
-      { status: 500,
-        headers: header
-       }
+      { status: 500 }
     );
   }
 }

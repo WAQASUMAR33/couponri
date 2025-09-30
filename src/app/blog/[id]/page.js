@@ -35,8 +35,8 @@ export async function generateMetadata({ params }) {
         type: 'website',
         images: [
           {
-            url: `https://m3xtrader.com/coupon/uploads/${blog.image}`,
-            secureUrl: `https://m3xtrader.com/coupon/uploads/${blog.image}`,
+            url: `https://couponri.divenclave.com/uploads/${blog.image}`,
+            secureUrl: `https://couponri.divenclave.com/uploads/${blog.image}`,
             alt: blog.meta_title,
           }
         ]
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }) {
         description: blog.meta_description,
         creator: '@CouponRi',
         images: {
-          url: `https://m3xtrader.com/coupon/uploads/${blog.image}`,
+          url: `https://couponri.divenclave.com/uploads/${blog.image}`,
           alt: blog.meta_title,
         }
       },

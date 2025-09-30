@@ -47,7 +47,7 @@ const CompanyDetail = ({ id }) => {
           '@context': 'https://schema.org',
           '@type': 'Store',
           title: companyData.com_title,
-          image: `https://m3xtrader.com/coupon/uploads/${companyData.comp_logo}` ,
+          image: `https://couponri.divenclave.com/uploads/${companyData.comp_logo}` ,
           description: companyData.comp_description,
         }
         setjsonLd(jsonLdmain);
