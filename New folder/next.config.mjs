@@ -6,6 +6,10 @@ const nextConfig = {
             protocol: 'https',
             hostname: 'm3xtrader.com',
           },
+          {
+            protocol: 'https',
+            hostname: 'couponri.divenclave.com',
+          },
         ],
       },
 };
